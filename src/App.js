@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Sidebar from './components/Sidebar/sidebar'
+import Main from './components/Main/main' 
+import store from './components/Store/index';
+import  _ from 'lodash';
 function App() {
+  const {contacts, user, activeUser} = store.getState();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar contacts={_.values(contacts)} />
+      <Main user={user} activeUser = {activeUser} />
     </div>
   );
 }

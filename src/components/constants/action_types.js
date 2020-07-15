@@ -1,0 +1,3 @@
+export const ACTIVE_USER_ID = "ACTIVE_USER_ID";
+export const SET_TYPING_VALUE = "SET_TYPING_VALUE";
+export const SEND_MESSAGE = "SEND_MESSAGE";
